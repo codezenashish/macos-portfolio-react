@@ -1,0 +1,34 @@
+import { navLinks, navIcons } from "../constants"
+import dayjs from "dayjs"
+const Navbar = () => {
+    return (
+        <nav className="flex justify-between items-center bg-white/50 backdrop-blur-2xl p-2 px-5 s">
+            <div className=" flex gap-4 ">
+                <img className="size-6" src="/images/logo.svg" alt="" />
+                <p className="font-bold text-lg">Ashish'c portfolio</p>
+                <ul className="flex gap-2 capitalize justify-center items-center ">
+                    {navLinks.map(({ id, name }) => (
+                        <li className=" cursor-pointer" key={id}> <p className="hover:underline text-base" >{name}</p> </li>
+                    ))}
+                </ul>
+
+                <div className="">
+
+                </div>
+            </div>
+
+            <div className="flex justify-center items-center gap-2 ">
+                <ul className="flex gap-3 ">
+                    {navIcons.map(({ id, img }) => (
+                        <li key={id}>
+                            <img src={img} alt={`icon-${id}`} />
+                        </li>
+                    ))}
+                </ul>
+                <time>{dayjs().format('ddd MMM D h:mm A')} </time>
+            </div>
+        </nav>
+    )
+}
+
+export default Navbar
