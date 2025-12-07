@@ -1,9 +1,8 @@
-import gsap from 'gsap';
+
 import React from 'react'
 
 const Welcome = () => {
-  const titleRef = React.useRef(null);
-  const subtitleRef = React.useRef(null);
+
   return (
     <section className='flex flex-col justify-center items-center min-h-screen' id='welcome'>
       <p >Hay, I Ashish, a passionate developer.</p>
