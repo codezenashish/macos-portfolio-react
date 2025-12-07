@@ -1,8 +1,8 @@
 import { navLinks, navIcons } from "../constants"
 import dayjs from "dayjs"
-const Navbar = () => {
+const NavBar = () => {
     return (
-        <nav className="flex justify-between items-center bg-white/50 backdrop-blur-2xl p-2 px-5 s">
+        <nav className="flex justify-between items-center fixed top-0 w-full   p-2 px-5 bg-white/30 backdrop-blur-xl border border-white/20  ">
             <div className=" flex gap-4 ">
                 <img className="size-6" src="/images/logo.svg" alt="" />
                 <p className="font-bold text-lg">Ashish'c portfolio</p>
@@ -31,4 +31,4 @@ const Navbar = () => {
     )
 }
 
-export default Navbar
+export default NavBar

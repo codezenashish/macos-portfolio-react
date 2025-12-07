@@ -10,15 +10,15 @@ const navIcons = [
     img: "/icons/wifi.svg",
   },
   {
-    id: 1,
+    id: 2,
     img: "/icons/search.svg",
   },
   {
-    id: 1,
+    id: 3,
     img: "/icons/user.svg",
   },
   {
-    id: 1,
+    id: 4,
     img: "/icons/mode.svg",
   },
 ];
