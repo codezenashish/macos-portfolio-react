@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Draggable = () => {
+const Photos = () => {
   return (
     <div>
       
@@ -8,4 +8,4 @@ const Draggable = () => {
   )
 }
 
-export default Draggable
+export default Photos

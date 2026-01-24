@@ -7,7 +7,7 @@ const initialState = {
     contact: { isOpen: false, isMinimized: false },
     terminal: { isOpen: false, isMinimized: false },
   },
-  activeApp: null, 
+  activeApp: null,
 };
 
 const osSlice = createSlice({
@@ -17,7 +17,7 @@ const osSlice = createSlice({
     opneApp: (state, action) => {
       const appId = action.payload;
       state.apps[appId].isOpen = true;
-      state.apps[appId].isOpen = false;
+      state.apps[appId].isMinimized = false;
       state.activeApp = appId;
     },
     closeApp: (state, action) => {

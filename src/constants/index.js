@@ -23,6 +23,24 @@ const navIcons = [
   },
 ];
 
+const desktopFolders = [
+  {
+    id: "about", // ✅ Matches Redux
+    label: "About Me",
+    icon: "/public/images/folder.png",
+  },
+  {
+    id: "projects", // ✅ Matches Redux
+    label: "Projects",
+    icon: "/public/images/folder.png",
+  },
+  {
+    id: "contact", // ✅ Matches Redux
+    label: "Contact",
+    icon: "/public/images/folder.png",
+  },
+];
+
 const dockItem = [
   {
     id: "finder",
@@ -62,4 +80,4 @@ const dockItem = [
   },
 ];
 
-export { navLinks, navIcons, dockItem };
+export { navLinks, navIcons, dockItem, desktopFolders };
