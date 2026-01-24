@@ -2,7 +2,7 @@ import { navLinks, navIcons } from "../constants";
 import dayjs from "dayjs";
 const NavBar = () => {
   return (
-    <nav className="flex justify-between items-center fixed top-0 w-full   p-2 px-5 bg-white/20 backdrop-blur-xl border border-white/30">
+    <nav className="flex justify-between items-center fixed top-0 w-full  px-5bg-white/20 backdrop-blur-xl border border-white/30 p-2 shadow-2xl">
       <div className=" flex gap-4 ">
         <img className="size-6" src="/images/logo.svg" alt="" />
         <p className="font-bold text-lg text-black">Ashish'c portfolio</p>
