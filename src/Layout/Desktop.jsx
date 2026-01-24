@@ -11,11 +11,11 @@ const Desktop = () => {
 
   return (
     <section
-      className="flex flex-col justify-center items-center min-h-screen"
+      className="relative flex flex-col justify-center items-center min-h-screen"
       id="welcome"
     >
       {/* Mobile warning - visible only on mobile */}
-      <div className="md:hidden text-white text-center px-4 bg-white/20 backdrop-blur-xl border border-white/30 rounded-2xl p-2 shadow-2xl ">
+      <div className="md:hidden text-white text-center px-4 bg-white/20 backdrop-blur-xl border border-white/30 rounded-2xl p-2 shadow-2xl">
         <p className="text-lg font-semibold capitalize">
           This portfolio is designed for desktop/tablet screens only.
         </p>
@@ -32,8 +32,8 @@ const Desktop = () => {
         <h1 className="text-white font-bold text-4xl">Portfolio</h1>
       </div>
 
-      {/* Windows - hidden on mobile */}
-      <div className="hidden md:block">
+      {/* Windows container - FIXED: full screen size with relative positioning */}
+      <div className="hidden md:block absolute inset-0 overflow-hidden">
         <AnimatePresence mode="wait">
           {apps.about.isOpen && !apps.about.isMinimized && (
             <Window
