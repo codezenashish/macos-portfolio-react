@@ -14,7 +14,6 @@ const Desktop = () => {
       className="relative flex flex-col justify-center items-center min-h-screen"
       id="welcome"
     >
-      {/* Mobile warning - visible only on mobile */}
       <div className="md:hidden text-white text-center px-4 bg-white/20 backdrop-blur-xl border border-white/30 rounded-2xl p-2 shadow-2xl">
         <p className="text-lg font-semibold capitalize">
           This portfolio is designed for desktop/tablet screens only.
@@ -24,7 +23,6 @@ const Desktop = () => {
         </p>
       </div>
 
-      {/* Desktop content - hidden on mobile */}
       <div className="hidden md:flex md:flex-col md:justify-center md:items-center w-full">
         <p className="text-white font-semibold capitalize">
           Hay, I Ashish, a passionate developer.
@@ -32,8 +30,8 @@ const Desktop = () => {
         <h1 className="text-white font-bold text-4xl">Portfolio</h1>
       </div>
 
-      {/* Windows container - FIXED: full screen size with relative positioning */}
-      <div className="hidden md:block absolute inset-0 overflow-hidden">
+      {/* Window container - starts below navbar (top-12 = 48px) and above dock (bottom-20 = 80px) */}
+      <div className="hidden md:block fixed top-12 left-0 right-0 bottom-20 pointer-events-none z-40">
         <AnimatePresence mode="wait">
           {apps.about.isOpen && !apps.about.isMinimized && (
             <Window

@@ -23,9 +23,8 @@ const Window = ({
       <div
         ref={nodeRef}
         style={{ position: "absolute" }}
-        className={isActive ? "z-50" : "z-10"}
+        className={`pointer-events-auto ${isActive ? "z-50" : "z-10"}`}
       >
-        
         <motion.div
           onClick={onActivate}
           initial={{ scale: 0.8, opacity: 0, y: 20 }}
@@ -37,11 +36,17 @@ const Window = ({
           <div className="title-bar h-8 bg-[#e8e8e8] border-b border-gray-300 flex items-center px-4 relative select-none cursor-move">
             <div className="flex gap-2 group">
               <button
-                onClick={onClose}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  onClose();
+                }}
                 className="w-3 h-3 rounded-full bg-[#ff5f56] border border-[#e0443e] hover:bg-red-700 flex items-center justify-center"
               ></button>
               <button
-                onClick={onMinimize}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  onMinimize();
+                }}
                 className="w-3 h-3 rounded-full bg-[#ffbd2e] border border-[#dea123] hover:bg-yellow-600"
               ></button>
               <button className="w-3 h-3 rounded-full bg-[#27c93f] border border-[#1aab29] hover:bg-green-600"></button>
