@@ -1,7 +1,7 @@
 import { useSelector, useDispatch } from "react-redux";
-import { closeApp, minimize, setFocus } from "../App/features/osSlice";
-import { Window } from "../components/index";
-import Terminal from "../page/Terminal";
+import { closeApp, minimize, setFocus } from "../../features/osSlice";
+import Window from "../ui/Window";
+import Terminal from "../../features/terminal/Terminal";
 import { AnimatePresence } from "framer-motion";
 
 const Desktop = () => {

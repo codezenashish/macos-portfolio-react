@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
-import { opneApp, setFocus } from "../App/features/osSlice";
-import { dockItem } from "../constants";
+import { opneApp, setFocus } from "../../features/osSlice";
+import { dockItem } from "../../constants";
 
 const Dock = () => {
   const dispatch = useDispatch();
